@@ -1,0 +1,121 @@
+<!--
+    Done BY:                         ID:
+    1.Ermias Antigegn               1305648
+    2.Atsedemariam Minwuyelet       1305646
+    3.Abaynesh Ayal                 1305793
+    4.Ephrata Dagnaw                1305886
+    5.Atklt Misganaw                1305808
+    6.Yigermal Alelign              1305672
+    7.Aregahegn Getie               1305883
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("gra21.jpg");
+        }
+        .login-container {
+            width: fit-content;
+            height: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(250 250,250,0.1);
+            box-shadow: 0 0 80px rgba(250, 250, 255, 1);
+            border-radius: 10%;
+            color:white;
+            font-family:serif;
+            position:auto-content;
+        }
+
+        .login-container h2 {
+            text-align: center;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+            input{
+               color:black; 
+               background-color:rgba(250,250,250,0.5);
+               border: 2px solid rgba(0, 0, 0,0.6);
+               border-right:6px solid rgba(255,255,255,1);
+               border-bottom:1px solid rgba(255,255,255,1);
+            }
+            textarea{
+            background-color:rgba(250,250,250,0.3);
+                border-right:4px solid rgba(255,255,255,1);
+                border-bottom:1px solid rgba(255,255,255,1);
+            }
+            footer{
+                text-align: right;
+                align-content: baseline;
+            }
+            #submit{
+                background-color:magenta;
+                opacity:0.6;
+                padding:5px;
+                padding-left:50px;
+                padding-right:30px;
+                font-weight:bold;
+            }
+    </style>
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Register</h2>
+        <form id="registrationForm" method="POST" action="Form.php" onsubmit="return inputValidate()">
+            <label for="name">Full Name:</label>
+            <p id="nameError"></p>
+            <input type="text" id="name" name="name" placeholder="Full Name">
+            <label for="idNumber">Id Number:</label>
+            <input type="text" id="idNumber" name="idNumber" placeholder="Id Number">
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="Region" placeholder="Region">
+            <input type="text" id="address" name="Zone" placeholder="Zone"><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="age"><br>
+            <label for="sex">Sex:</label>
+            <input type="radio" name="sex" value="male">Male
+            <input type="radio" name="sex" value="female">Female<br><br>
+            <label for="birthDate">Date of Birth:</label>
+            <input type="date" id="birthDate" name="birthDate" placeholder="Date of Birth"><br><br>
+            <label for="eye-color">Eye Color:</label>
+            <select id="eye-color" name="eye-color" onchange="handleEyeColorChange()">
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="brown">Brown</option>
+                <option value="hazel">Hazel</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="other-eye-color" name="other-eye-color" placeholder="Enter your eye color" style="display: none;"><br><br>
+            <label for ="hobbies" >Enter your hobbies: </label>
+            <textarea id="hobbies" name="hobbies" cols="30" rows="3"></textarea>
+     <br><br><br><br></nr> <button type="submit" id="submit">Submit</button>
+        </form>
+        <script src="validation.js"></script>
+        <footer id="footer"><p>©CopyRight @ 2024</p></footer>
+    </div>
+</body>
+</html>

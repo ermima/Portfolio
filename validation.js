@@ -1,4 +1,4 @@
-
+/*
   function inputValidate(){
     const name=document.getElementById("name").value.trim();
     const age=document.getElementById("age").value.trim();
@@ -27,7 +27,8 @@
       return false;
      }    
      
- }  
+ } 
+ */ 
  
       document.getElementById("birthDate").valueAsDate = new Date();
 
