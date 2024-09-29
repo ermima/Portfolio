@@ -133,6 +133,68 @@ background-color: #1a1a1a;
     </div>
 </section>
 	  <hr>
+	  <br>
+	  <br>
+	  <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .message-container {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        .message {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 24px;
+            animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <div id="message" class="message"></div>
+    </div>
+    <script>
+        const messages = [
+            "Welcome to \nErmias Antigegn personal website",
+            "You are at the real place \nto get the best web developer and graphics designer.",
+            "Have a nice time \nwith my website"
+        ];
+
+        let currentIndex = 0;
+
+        function changeMessage() {
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = messages[currentIndex];
+            currentIndex = (currentIndex + 1) % messages.length;
+        }
+
+        changeMessage(); // Initial call to set the first message
+        setInterval(changeMessage, 20000); // Change message every 5 seconds
+    </script>
+	  <br>
+	  <br>
+	  <hr>
 
 <style>
         .social-icons {
